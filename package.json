@@ -1,6 +1,6 @@
 {
   "name": "@joonalarcon/neumorphism",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Componentes neumórficos para React · Soft UI con carácter · Hecho en Chile",
   "type": "module",
   "main": "dist/index.js",
@@ -13,11 +13,10 @@
   ],
   "scripts": {
     "build": "rollup -c",
-    "dev": "rollup -c -w",
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
-    "lucide-react": "^0.300.0",
+    "lucide-react": "^0.469.0",
     "react": "^18.0.0 || ^19.0.0",
     "react-dom": "^18.0.0 || ^19.0.0"
   },
@@ -27,6 +26,7 @@
     "@rollup/plugin-typescript": "^11.1.6",
     "@types/react": "^18.3.29",
     "@types/react-dom": "^18.3.7",
+    "lucide-react": "^0.469.0",
     "rollup": "^4.60.4",
     "rollup-plugin-postcss": "^4.0.2",
     "tslib": "^2.8.1",

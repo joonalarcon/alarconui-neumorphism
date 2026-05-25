@@ -23,5 +23,5 @@ export default {
     typescript({ tsconfig: './tsconfig.json' }),
     postcss({ extract: true, minimize: true })
   ],
-  external: ['react', 'react-dom', 'lucide-react']
+  external: ['react', 'react-dom', 'react/jsx-runtime', 'lucide-react']
 };
