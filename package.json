@@ -1,6 +1,6 @@
 {
   "name": "@joonalarcon/neumorphism",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Componentes neumórficos para React · Soft UI con carácter · Hecho en Chile",
   "type": "module",
   "main": "dist/index.js",
