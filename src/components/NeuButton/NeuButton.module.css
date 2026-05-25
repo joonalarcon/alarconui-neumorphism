@@ -1,0 +1,201 @@
+/* Variables neumórficas */
+:root {
+  --neu-bg: #e8e8e8;
+  --neu-shadow-dark: #c8c8c8;
+  --neu-shadow-light: #ffffff;
+  --neu-primary: #4a8c72;
+  --neu-primary-dark: #3d755f;
+  --neu-primary-light: #57a382;
+  --neu-secondary: #6b7280;
+  --neu-secondary-dark: #5a616d;
+  --neu-secondary-light: #7c8392;
+  --neu-danger: #c26b6b;
+  --neu-danger-dark: #a85a5a;
+  --neu-danger-light: #dc7c7c;
+  --neu-success: #509c7c;
+  --neu-success-dark: #438568;
+  --neu-success-light: #5db390;
+}
+
+/* Base del botón */
+.neuButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-weight: 600;
+  border: none;
+  border-radius: 60px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  background: var(--neu-bg);
+  color: #1f2937;
+  box-shadow: 8px 8px 16px var(--neu-shadow-dark), -8px -8px 16px var(--neu-shadow-light);
+}
+
+/* Tamaños */
+.neuButton.sm {
+  padding: 0.5rem 1.2rem;
+  font-size: 0.75rem;
+  gap: 0.4rem;
+}
+.neuButton.md {
+  padding: 0.75rem 1.8rem;
+  font-size: 0.9rem;
+  gap: 0.5rem;
+}
+.neuButton.lg {
+  padding: 1rem 2.2rem;
+  font-size: 1rem;
+  gap: 0.6rem;
+}
+
+/* Ancho completo */
+.neuButton.fullWidth {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Variantes */
+.neuButton.primary {
+  background: var(--neu-primary);
+  color: white;
+  box-shadow: 8px 8px 16px var(--neu-primary-dark), -8px -8px 16px var(--neu-primary-light);
+}
+.neuButton.secondary {
+  background: var(--neu-secondary);
+  color: white;
+  box-shadow: 8px 8px 16px var(--neu-secondary-dark), -8px -8px 16px var(--neu-secondary-light);
+}
+.neuButton.danger {
+  background: var(--neu-danger);
+  color: white;
+  box-shadow: 8px 8px 16px var(--neu-danger-dark), -8px -8px 16px var(--neu-danger-light);
+}
+.neuButton.success {
+  background: var(--neu-success);
+  color: white;
+  box-shadow: 8px 8px 16px var(--neu-success-dark), -8px -8px 16px var(--neu-success-light);
+}
+.neuButton.outline {
+  background: transparent;
+  color: var(--neu-primary);
+  box-shadow: none;
+  border: 2px solid var(--neu-primary);
+}
+.neuButton.outline:active {
+  transform: scale(0.97);
+  background: rgba(74, 140, 114, 0.1);
+}
+
+/* Hover - se eleva */
+.neuButton:not(.disabled):not(.loading):hover {
+  transform: translateY(-2px);
+  box-shadow: 10px 10px 20px var(--neu-shadow-dark), -10px -10px 20px var(--neu-shadow-light);
+}
+.neuButton.primary:not(.disabled):not(.loading):hover {
+  box-shadow: 10px 10px 20px var(--neu-primary-dark), -10px -10px 20px var(--neu-primary-light);
+}
+.neuButton.secondary:not(.disabled):not(.loading):hover {
+  box-shadow: 10px 10px 20px var(--neu-secondary-dark), -10px -10px 20px var(--neu-secondary-light);
+}
+.neuButton.danger:not(.disabled):not(.loading):hover {
+  box-shadow: 10px 10px 20px var(--neu-danger-dark), -10px -10px 20px var(--neu-danger-light);
+}
+.neuButton.success:not(.disabled):not(.loading):hover {
+  box-shadow: 10px 10px 20px var(--neu-success-dark), -10px -10px 20px var(--neu-success-light);
+}
+
+/* Active - se hunde */
+.neuButton:not(.disabled):not(.loading):active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: inset 6px 6px 12px var(--neu-shadow-dark), inset -6px -6px 12px var(--neu-shadow-light);
+}
+.neuButton.primary:not(.disabled):not(.loading):active {
+  box-shadow: inset 6px 6px 12px var(--neu-primary-dark), inset -6px -6px 12px var(--neu-primary-light);
+}
+.neuButton.secondary:not(.disabled):not(.loading):active {
+  box-shadow: inset 6px 6px 12px var(--neu-secondary-dark), inset -6px -6px 12px var(--neu-secondary-light);
+}
+.neuButton.danger:not(.disabled):not(.loading):active {
+  box-shadow: inset 6px 6px 12px var(--neu-danger-dark), inset -6px -6px 12px var(--neu-danger-light);
+}
+.neuButton.success:not(.disabled):not(.loading):active {
+  box-shadow: inset 6px 6px 12px var(--neu-success-dark), inset -6px -6px 12px var(--neu-success-light);
+}
+
+/* Disabled */
+.neuButton.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Loading state */
+.neuButton.loading {
+  cursor: wait;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+/* Spinner interno */
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-top-color: currentColor;
+  border-right-color: currentColor;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Iconos */
+.iconLeft, .iconRight {
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+}
+
+.children {
+  display: inline-block;
+}
+
+/* --- Variantes de Sombra (Shapes) --- */
+.shadowConvex {
+  /* La sombra por defecto ya está en .neuButton y variantes de color */
+}
+.shadowConvex:active {
+  box-shadow: inset 6px 6px 12px var(--neu-shadow-dark), inset -6px -6px 12px var(--neu-shadow-light) !important;
+}
+
+.shadowConcave {
+  box-shadow: inset 6px 6px 12px var(--neu-shadow-dark), inset -6px -6px 12px var(--neu-shadow-light) !important;
+}
+.shadowConcave:active {
+  box-shadow: 8px 8px 16px var(--neu-shadow-dark), -8px -8px 16px var(--neu-shadow-light) !important;
+}
+
+.shadowFlat {
+  box-shadow: none !important;
+  border: 1px solid var(--neu-shadow-dark);
+}
+.shadowFlat:active {
+  background: #dcdcdc !important;
+  transform: scale(0.97);
+}
+
+.shadowPressed {
+  box-shadow: inset 5px 5px 10px var(--neu-shadow-dark), inset -5px -5px 10px var(--neu-shadow-light) !important;
+  background: #d4d4d4 !important;
+}
+.shadowPressed:active {
+  box-shadow: 8px 8px 16px var(--neu-shadow-dark), -8px -8px 16px var(--neu-shadow-light) !important;
+}

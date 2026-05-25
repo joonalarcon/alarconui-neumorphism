@@ -2,6 +2,7 @@
   "name": "@joonalarcon/neumorphism",
   "version": "0.1.0-beta.0",
   "description": "Componentes neumórficos para React · Soft UI con carácter · Hecho en Chile",
+  "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
