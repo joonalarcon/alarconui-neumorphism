@@ -1,6 +1,6 @@
 {
   "name": "@joonalarcon/neumorphism",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Componentes neumórficos para React · Soft UI con carácter · Hecho en Chile",
   "type": "module",
   "main": "dist/index.js",
@@ -18,8 +18,8 @@
   },
   "peerDependencies": {
     "lucide-react": "^0.300.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.8",
